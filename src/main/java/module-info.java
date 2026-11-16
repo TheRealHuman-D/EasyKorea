@@ -10,8 +10,10 @@ module com.therealhuman.dev.easykorea {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens com.therealhuman.dev.easykorea to javafx.fxml;
-
     exports com.therealhuman.dev.easykorea;
+    exports com.therealhuman.dev.easykorea.view;
+
+    opens com.therealhuman.dev.easykorea to javafx.fxml;
+    opens com.therealhuman.dev.easykorea.view to javafx.fxml;
 }
 
