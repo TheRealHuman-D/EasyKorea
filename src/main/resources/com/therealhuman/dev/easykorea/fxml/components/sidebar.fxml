@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.web.WebView?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import java.lang.Double?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" spacing="14"
+    prefWidth="224" minWidth="224" maxWidth="224" styleClass="app-sidebar"
+    fx:controller="com.therealhuman.dev.easykorea.view.SliderBarController">
+    <padding>
+        <Insets top="24" right="12" bottom="24" left="12" />
+    </padding>
+    <Label text="EASY KOREA" styleClass="brand" wrapText="true" minWidth="0" minHeight="-Infinity"
+        maxWidth="Infinity" />
+    <Label text="STUDIO · DESKTOP" styleClass="brand-subtitle" wrapText="true" minWidth="0"
+        minHeight="-Infinity" maxWidth="Infinity" />
+    <Region prefHeight="24" />
+    <Button text="Dashboard" minHeight="40" accessibleText="Dashboard" maxWidth="Infinity"
+        prefHeight="44" styleClass="nav-item" alignment="CENTER_LEFT" fx:id="dashboardButton"
+        onAction="#handleOnDashboardButton" />
+    <Button text="Vocabulary" minHeight="40" accessibleText="Vocabulary" maxWidth="Infinity"
+        prefHeight="44" styleClass="nav-item" alignment="CENTER_LEFT" fx:id="vocabularyButton"
+        onAction="#handleOnVocabularyButton" />
+    <Button text="TOPIK Test" minHeight="40" accessibleText="TOPIK Test" maxWidth="Infinity"
+        prefHeight="44" styleClass="nav-item" alignment="CENTER_LEFT" fx:id="testCenterButton" />
+    <Button text="Progress" minHeight="40" accessibleText="Progress" maxWidth="Infinity"
+        prefHeight="44" styleClass="nav-item" alignment="CENTER_LEFT" fx:id="progressButton" />
+    <Button text="Settings" minHeight="40" accessibleText="Settings" maxWidth="Infinity"
+        prefHeight="44" styleClass="nav-item" alignment="CENTER_LEFT" fx:id="settingsButton" />
+    <Region HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" minWidth="0" minHeight="0" />
+    <Button text="‹" minHeight="40" accessibleText="Toggle sidebar" fx:id="collapseSidebarButton" />
+</VBox>

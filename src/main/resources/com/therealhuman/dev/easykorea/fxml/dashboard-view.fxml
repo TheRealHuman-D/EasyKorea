@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dashboard | Figma node 9:2 | Static layout; styling configured separately. -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.Double?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fitToWidth="true" hbarPolicy="NEVER" minWidth="0" prefWidth="1136" prefHeight="744" styleClass="page, dashboard-page" fx:id="pageRoot">
+    <content>
+        <VBox spacing="24" minWidth="0">
+            <padding>
+                <Insets top="36" right="32" bottom="48" left="36"/>
+            </padding>
+            <VBox spacing="8" HBox.hgrow="ALWAYS" minWidth="0">
+                <Label minHeight="-Infinity" text="Good evening, Nguyễn Duy" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="page-title"/>
+                <Label minHeight="-Infinity" text="Vocabulary, TOPIK and study activity · 72 day streak" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="page-subtitle"/>
+            </VBox>
+            <GridPane hgap="20" vgap="20" minWidth="0">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="66" hgrow="ALWAYS" minWidth="0"/>
+                    <ColumnConstraints percentWidth="34" hgrow="ALWAYS" minWidth="0"/>
+                </columnConstraints>
+                <VBox spacing="12" prefHeight="162" styleClass="panel, recent-activity-card" minWidth="0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label minHeight="-Infinity" text="RECENT ACTIVITY" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="eyebrow"/>
+                    <Label minHeight="-Infinity" text="환경 보호 · Dictionary lookup" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="section-title"/>
+                    <Label minHeight="-Infinity" text="Saved to vocabulary · 18 minutes ago" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <HBox spacing="16" minWidth="0" alignment="CENTER_LEFT">
+                        <ProgressBar progress="0.65" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                        <Button text="Dictionary" minHeight="40"/>
+                    </HBox>
+                </VBox>
+                <VBox spacing="12" prefHeight="162" styleClass="panel, daily-goal-card" minWidth="0" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label minHeight="-Infinity" text="Today's goal" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="section-title"/>
+                    <Label minHeight="-Infinity" text="32 / 40 min" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="metric-value"/>
+                    <Label minHeight="-Infinity" text="8 minutes to complete your study goal" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <ProgressBar progress="0.8" maxWidth="Infinity"/>
+                </VBox>
+            </GridPane>
+            <GridPane hgap="20" vgap="20" minWidth="0">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="25.0" hgrow="ALWAYS" minWidth="0"/>
+                    <ColumnConstraints percentWidth="25.0" hgrow="ALWAYS" minWidth="0"/>
+                    <ColumnConstraints percentWidth="25.0" hgrow="ALWAYS" minWidth="0"/>
+                    <ColumnConstraints percentWidth="25.0" hgrow="ALWAYS" minWidth="0"/>
+                </columnConstraints>
+                <VBox spacing="12" prefHeight="145" styleClass="panel, saved-vocabulary-card" minWidth="0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label minHeight="-Infinity" text="Saved vocabulary" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <Label minHeight="-Infinity" text="1,248" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="metric-value"/>
+                    <Label minHeight="-Infinity" text="Local library" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <ProgressBar progress="0.84" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="12" prefHeight="145" styleClass="panel, review-due-card" minWidth="0" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label minHeight="-Infinity" text="Review due" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <Label minHeight="-Infinity" text="18" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="metric-value"/>
+                    <Label minHeight="-Infinity" text="Due today" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <ProgressBar progress="0.91" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="12" prefHeight="145" styleClass="panel, dictionary-searches-card" minWidth="0" GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label minHeight="-Infinity" text="Dictionary searches" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <Label minHeight="-Infinity" text="24" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="metric-value"/>
+                    <Label minHeight="-Infinity" text="Last 7 days" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <ProgressBar progress="0.72" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="12" prefHeight="145" styleClass="panel, topik-attempts-card" minWidth="0" GridPane.columnIndex="3" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <Label minHeight="-Infinity" text="TOPIK attempts" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <Label minHeight="-Infinity" text="3" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="metric-value"/>
+                    <Label minHeight="-Infinity" text="Last 30 days" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <ProgressBar progress="0.79" maxWidth="Infinity"/>
+                </VBox>
+            </GridPane>
+            <VBox spacing="12" prefHeight="190" styleClass="panel, study-contributions" minWidth="0">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+                <HBox spacing="8" minWidth="0" alignment="CENTER_LEFT">
+                    <Label minHeight="-Infinity" text="Study activity" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="section-title"/>
+                    <Label minHeight="-Infinity" text="312 active days · 72-day streak · 184h studied" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <Region HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" minWidth="0" minHeight="0"/>
+                    <Label minHeight="-Infinity" text="Less" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    <Rectangle width="10" height="10" styleClass="contribution-level-0"/>
+                    <Rectangle width="10" height="10" styleClass="contribution-level-1"/>
+                    <Rectangle width="10" height="10" styleClass="contribution-level-2"/>
+                    <Rectangle width="10" height="10" styleClass="contribution-level-3"/>
+                    <Rectangle width="10" height="10" styleClass="contribution-level-4"/>
+                    <Label minHeight="-Infinity" text="More" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                </HBox>
+                <GridPane hgap="0" vgap="0" minWidth="0">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                        <ColumnConstraints percentWidth="8.333333333333334" hgrow="ALWAYS" minWidth="0"/>
+                    </columnConstraints>
+                    <Label minHeight="-Infinity" text="Dec" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Jan" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Feb" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Mar" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="3" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Apr" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="4" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="May" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="5" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Jun" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="6" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Jul" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="7" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Aug" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="8" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Sep" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="9" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Oct" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="10" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                    <Label minHeight="-Infinity" text="Nov" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="calendar-month" GridPane.columnIndex="11" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.fillWidth="true"/>
+                </GridPane>
+                <HBox spacing="16" minWidth="0" alignment="CENTER_LEFT">
+                    <VBox spacing="12" minWidth="0">
+                        <Label minHeight="-Infinity" text="Mon" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                        <Label minHeight="-Infinity" text="Wed" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                        <Label minHeight="-Infinity" text="Fri" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="body-text"/>
+                    </VBox>
+                    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" minWidth="0" prefHeight="100" minHeight="100" HBox.hgrow="ALWAYS">
+                        <content>
+                            <GridPane hgap="3" vgap="3" fx:id="contributionGrid">
+                                <Rectangle width="10" height="10" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="0" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="0" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="1" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="1" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="1" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="2" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="2" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="2" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="2" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="2" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="2" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="2" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="3" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="3" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="3" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="3" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="3" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="3" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="3" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="4" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="4" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="4" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="4" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="4" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="4" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="4" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="5" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="5" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="5" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="5" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="5" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="5" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="5" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="6" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="6" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="6" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="6" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="6" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="6" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="6" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="7" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="7" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="7" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="7" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="7" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="7" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="7" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="8" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="8" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="8" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="8" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="8" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="8" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="8" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="9" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="9" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="9" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="9" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="9" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="9" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="9" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="10" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="10" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="10" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="10" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="10" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="10" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="10" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="11" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="11" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="11" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="11" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="11" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="11" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="11" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="12" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="12" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="12" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="12" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="12" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="12" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="12" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="13" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="13" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="13" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="13" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="13" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="13" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="13" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="14" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="14" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="14" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="14" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="14" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="14" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="14" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="15" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="15" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="15" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="15" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="15" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="15" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="15" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="16" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="16" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="16" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="16" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="16" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="16" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="16" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="17" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="17" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="17" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="17" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="17" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="17" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="17" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="18" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="18" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="18" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="18" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="18" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="18" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="18" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="19" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="19" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="19" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="19" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="19" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="19" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="19" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="20" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="20" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="20" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="20" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="20" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="20" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="20" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="21" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="21" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="21" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="21" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="21" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="21" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="21" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="22" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="22" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="22" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="22" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="22" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="22" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="22" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="23" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="23" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="23" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="23" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="23" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="23" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="23" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="24" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="24" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="24" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="24" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="24" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="24" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="24" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="25" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="25" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="25" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="25" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="25" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="25" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="25" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="26" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="26" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="26" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="26" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="26" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="26" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="26" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="27" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="27" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="27" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="27" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="27" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="27" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="27" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="28" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="28" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="28" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="28" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="28" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="28" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="28" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="29" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="29" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="29" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="29" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="29" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="29" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="29" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="30" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="30" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="30" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="30" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="30" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="30" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="30" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="31" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="31" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="31" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="31" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="31" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="31" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="31" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="32" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="32" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="32" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="32" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="32" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="32" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="32" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="33" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="33" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="33" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="33" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="33" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="33" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="33" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="34" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="34" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="34" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="34" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="34" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="34" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="34" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="35" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="35" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="35" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="35" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="35" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="35" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="35" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="36" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="36" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="36" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="36" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="36" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="36" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="36" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="37" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="37" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="37" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="37" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="37" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="37" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="37" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="38" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="38" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="38" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="38" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="38" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="38" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="38" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="39" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="39" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="39" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="39" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="39" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="39" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="39" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="40" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="40" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="40" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="40" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="40" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="40" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="40" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="41" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="41" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="41" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="41" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="41" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="41" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="41" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="42" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="42" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="42" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="42" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="42" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="42" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="42" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="43" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="43" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="43" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="43" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="43" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="43" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="43" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="44" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="44" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="44" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="44" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="44" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="44" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="44" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="45" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="45" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="45" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="45" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="45" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="45" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="45" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="46" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="46" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="46" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="46" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="46" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="46" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="46" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="47" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="47" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="47" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="47" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="47" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="47" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="47" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="48" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="48" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="48" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="48" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="48" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="48" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="48" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="49" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="49" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="49" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="49" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="49" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="49" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="49" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="50" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="50" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="50" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="50" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="50" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="50" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="50" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="51" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="51" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="51" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="51" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="51" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="51" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="51" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="52" GridPane.rowIndex="0" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="52" GridPane.rowIndex="1" styleClass="contribution-cell, contribution-level-3"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="52" GridPane.rowIndex="2" styleClass="contribution-cell, contribution-level-0"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="52" GridPane.rowIndex="3" styleClass="contribution-cell, contribution-level-2"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="52" GridPane.rowIndex="4" styleClass="contribution-cell, contribution-level-4"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="52" GridPane.rowIndex="5" styleClass="contribution-cell, contribution-level-1"/>
+                                <Rectangle width="10" height="10" GridPane.columnIndex="52" GridPane.rowIndex="6" styleClass="contribution-cell, contribution-level-3"/>
+                            </GridPane>
+                        </content>
+                    </ScrollPane>
+                </HBox>
+                <Label minHeight="-Infinity" text="Cell intensity = total study minutes per day · hover/click: date + minutes + sessions" wrapText="true" minWidth="0" maxWidth="Infinity" styleClass="caption"/>
+            </VBox>
+        </VBox>
+    </content>
+</ScrollPane>
