@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.Double?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" prefWidth="1360"
+    prefHeight="820" fx:id="appShell">
+    <left>
+        <fx:include source="components/sidebar.fxml" fx:id="sidebar" />
+    </left>
+    <center>
+        <BorderPane>
+            <top>
+                <fx:include source="components/header.fxml" fx:id="header" />
+            </top>
+            <center>
+                <StackPane fx:id="pageHost">
+                    <fx:include source="dashboard-view.fxml" fx:id="dashboard" />
+                </StackPane>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>
