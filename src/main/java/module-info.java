@@ -14,6 +14,8 @@ module com.therealhuman.dev.easykorea {
     requires static lombok;
     requires com.fasterxml.jackson.dataformat.toml;
     requires com.fasterxml.jackson.databind;
+    requires jakarta.persistence;
+    requires jakarta.transaction;
 
     exports com.therealhuman.dev.easykorea;
     exports com.therealhuman.dev.easykorea.view;
